@@ -1,0 +1,245 @@
+/*Body*/
+
+body
+{
+	background-color: #1C1D20;
+	background: url('http://i.imgur.com/b77R5JX.png') center 20% #2D3339;
+    background-size: cover;
+    background-color: rgb(45, 51, 57);
+    background
+    height: 100%;
+    width: 100%;
+    color: #2D3339;
+    font-size: 13px;
+    font-weight: 500;
+    padding-top: 0;
+    text-align: center;
+    position: relative;
+    background-size: 300% auto;
+    background-position: 80% 92%; 
+    background-attachment: fixed;
+}
+
+h1
+{
+	font-family: 'Roboto', sans-serif;
+	color: #979AAA;
+	font-size: 4em;
+	text-shadow: 2px 2px 0px rgba(59, 60, 54, 1);
+	margin: 10px auto;
+}
+
+footer
+{
+	font-family: 'Roboto', sans-serif;
+	color: #979AAA;
+	font-size: 10px;
+	padding-top: 2%;
+	margin:auto;
+}
+
+/*Container*/
+
+#container
+{
+	margin: auto;
+	background-color: #efefef;
+	width: 400px;
+	height: 400px;
+	box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.11);
+	border-radius: 5px;
+	border: 1px solid #DFE3E6;
+	box-shadow: inset 6px 6px 9px -9px rgba(97,96,97,0.91);
+}
+
+#actions
+{
+	width: 400px;
+	height: 110px;
+	margin:auto;
+	margin-top: 10px;
+	background-color: #F5F5F5;
+	box-shadow: 8px 8px 22px -8px rgba(0,0,0,1);
+	border: 1px solid #DFE3E6;
+	border-radius: 5px;
+	outline: 
+
+}
+
+div.colorPick
+{
+	float: right;
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+div.buttonActions
+{
+	width: 200px;
+	height: 100px;
+	float: right;
+}
+
+.secpart
+{
+	width: 198px;
+	height: 48px;
+	float: right;
+	border: 1px solid #CFCFC4;
+	border-radius: 30px;
+	margin-top: 3px;
+}
+
+	/*Grillas*/
+
+
+#grid
+{	
+	width: 198px;
+	height: 48px;
+	font-family: 'Roboto', sans-serif;
+	color: #3B3C36;
+	font-size: 10px;
+	float:right;
+	border: 1px solid #CFCFC4;
+	border-radius: 30px;
+	margin-top: 3px;
+
+}
+
+
+
+input
+{
+	width: 80px;
+	border-bottom: 1px solid #3B3C36;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	background-color: #f2f2f2;
+}
+
+input:focus {
+    outline: none !important;
+    border-bottom:1px solid #CFCFC4;
+    box-shadow: none;
+}
+
+p.auxFloat
+{
+	font-family: 'Roboto', sans-serif;
+	color: #3B3C36;
+	display: inline-block;
+	margin: 7% 8%;
+	font-size: 15px;
+	margin-right: 5%;
+	text-transform: uppercase;
+}
+
+button
+{
+	width: 30px;
+	height: 30px;
+	background-color: #f2f2f2;
+	border: 0.5px solid #CFCFC4;
+	border-radius: 100%;
+}
+
+button:focus {
+    outline: none !important;
+    border-bottom:1px solid #979AAA;
+    border-left: 1px solid #979AAA;
+    border-right: 1px solid #979AAA;
+    box-shadow: none;
+}
+
+
+
+div.btn
+{
+	margin: 5% 8%;
+	float: left;
+}
+
+#arrowTog
+{
+	border: none;
+}
+
+.ion-ios-arrow-right
+{
+	background-size: 100px;
+}
+
+
+
+/*Color Picker*/
+
+div.colorPick
+{	
+	height: 100px;
+	width: 200px;
+	/*border: 1px solid #CFCFC4;
+	border-radius: 30px;*/
+}
+
+.cRed
+{
+	width: 42px;
+	height: 42px;
+	display: inline;
+	margin: 2% 2%;
+    float: left;
+    border: 1px solid #CFCFC4;
+    border-radius: 100%;
+    background-color: #FF6961;
+}
+
+.cBlue
+{
+	width: 42px;
+	height: 42px;
+	display: inline;
+	margin: 2% 2%;
+    float: left;
+    border: 1px solid #CFCFC4;
+    border-radius: 100%;
+    background-color: #779ECB;
+}
+
+.cGreen
+{
+	width: 42px;
+	height: 42px;
+	display: inline;
+	margin: 2% 2%;
+    float: left;
+    border: 1px solid #CFCFC4;
+    border-radius: 100%;
+    background-color: #77DD77;
+}
+
+.cBlack
+{
+	width: 42px;
+	height: 42px;
+	display: inline;
+	margin: 2% 2%;
+    float: left;
+    border: 1px solid #CFCFC4;
+    border-radius: 100%;
+    background-color: #3B3C36;
+}
+
+.cWithe
+{
+	width: 42px;
+	height: 42px;
+	display: inline;
+	margin: 2% 2%;
+    float: left;
+    border: 1px solid #CFCFC4;
+    border-radius: 100%;
+    background-color: #F2F3F4;
+}
