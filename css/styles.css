@@ -243,3 +243,10 @@ div.colorPick
     border-radius: 100%;
     background-color: #F2F3F4;
 }
+
+.celda
+{
+	outline: 0.5px solid grey;
+	float: left;
+	cursor: pointer;
+}

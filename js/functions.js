@@ -15,8 +15,24 @@ var myPixelDraw = {
 
 	fns: {
 
-		calcSize: function() {
-	          console.log('calcSize');
+		calcSize: function(cantidad) {
+
+	        	if (cantidad === undefined)
+	        	{
+	        		cantidad = myPixelDraw.defaultCells;
+	        	}
+	        	
+	        	var totalCeldas = cantidad * cantidad;
+	        	myPixelDraw.container.empty();
+	        	
+	        	for (var i = 0; i < totalCeldas; i++) {
+	        		myPixelDraw.container.append('<div class="celda" draggable> </div>')
+	        	}
+	        	
+	        	var tamDeCelda = myPixelDraw.container.width() / cantidad;
+
+	        	$(".celda").width(tamDeCelda);
+	        	$(".celda").height(tamDeCelda);
 	        },
 	    
 	    reSize: function() {
