@@ -36,15 +36,35 @@ var myPixelDraw = {
 	        },
 	    
 	    reSize: function() {
-	          console.log('reSize');
+	          $('#sizeit').on('click', function() {
+	          	var newSisze = $('#resize').val();
+	          	if ( == 0 || newSisze > 50) 
+	          	{
+	          		alert('Ingres un valor de 1 a 50');
+                    var newSize = defaultCells;
+
+	          	} else if 
+	          	{
+	          		alter('Ingrese un numero valido');
+	          		var newSize = defaultCells;
+	          	}
+	          	myPixelDraw.fns.calcSize(newSize);
+	          })
+
 	        },
 		
 		detectMouseUp: function() {
-				console.log('detectMouseUp');
+				$(document).on('mouseup', function(e) {
+                myPixelDraw.coloring = false;
+            	});
 			},
 
 		colorPalette: function() {
-				console.log('colorPalette');
+				$(document).on('mouseup', function(i, e) {
+					var clase = $(e).attr('class');
+					$(e).css('background-color', clase);
+
+				});
 			},
 
 		pickColor: function() {
