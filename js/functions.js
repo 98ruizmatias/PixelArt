@@ -60,7 +60,7 @@ var myPixelDraw = {
 			},
 
 		colorPalette: function() {
-				$(document).on('mouseup', function(i, e) {
+				$('#color-pick > div').on('click', function() {
 					var clase = $(e).attr('class');
 					$(e).css('background-color', clase);
 
@@ -68,7 +68,7 @@ var myPixelDraw = {
 			},
 
 		pickColor: function() {
-				console.log('pickColor');
+			
 			},
 
 		colorIt: function() {
