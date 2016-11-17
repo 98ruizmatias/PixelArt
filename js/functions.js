@@ -37,16 +37,16 @@ var myPixelDraw = {
 	    
 	    reSize: function() {
 	          $('#sizeit').on('click', function() {
-	          	var newSisze = $('#resize').val();
-	          	if ( == 0 || newSisze > 50) 
+	          	var newSize = $('#reSize').val();
+	          	if (newSize == 0 || newSize > 50) 
 	          	{
 	          		alert('Ingres un valor de 1 a 50');
-                    var newSize = defaultCells;
+                    newSize = this.defaultCells;
 
-	          	} else if 
+	          	} else
 	          	{
 	          		alter('Ingrese un numero valido');
-	          		var newSize = defaultCells;
+	          		newSize = this.defaultCells;
 	          	}
 	          	myPixelDraw.fns.calcSize(newSize);
 	          })
@@ -60,11 +60,10 @@ var myPixelDraw = {
 			},
 
 		colorPalette: function() {
-				$('#color-pick > div').on('click', function() {
-					var clase = $(e).attr('class');
-					$(e).css('background-color', clase);
-
-				});
+				$('#colorPick > *').each(function(i, e) {
+                var clase = $(e).attr('class');
+                $(e).css('background-color', clase);
+            	});
 			},
 
 		pickColor: function() {
