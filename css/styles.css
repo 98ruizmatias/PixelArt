@@ -68,7 +68,7 @@ footer
 
 div.colorPick
 {
-	float: right;
+	float: left;
 	width: 50%;
 	height: 100%;
 	float: left;
@@ -78,7 +78,7 @@ div.buttonActions
 {
 	width: 200px;
 	height: 100px;
-	float: right;
+	float: left;
 }
 
 .secpart
@@ -176,12 +176,28 @@ div.btn
 
 /*Color Picker*/
 
-div.colorPick
+
+#colorPick
 {	
 	height: 100px;
 	width: 200px;
+	float: left;
 	/*border: 1px solid #CFCFC4;
 	border-radius: 30px;*/
+}
+
+#colorPick>div {
+    float: left;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 24px;
+    margin: 2px;
+    border: 1px solid #f1f1f1;
+}
+
+#colorPick>div.select {
+    border: 1px solid #000000;
 }
 
 .cRed

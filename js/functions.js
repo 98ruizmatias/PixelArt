@@ -1,18 +1,9 @@
 var myPixelDraw = {
 
-	colorPiked: 0,
+	colorPicked: 0,
 	cellColor: '#ecf0f1',
 	defaultCells: 30,
 	coloring: false,
-	init:function($contenedor){
-        this.container = $contenedor;
-        var fns = myPixelDraw.fns;
-        for (var i = 0; i < Object.keys(fns).length; i++) {
-            this.fns[Object.keys(fns)[i]]();
-        }
-    
-	},
-
 	fns: {
 
 		calcSize: function(cantidad) {
@@ -31,8 +22,7 @@ var myPixelDraw = {
 	        	
 	        	var tamDeCelda = myPixelDraw.container.width() / cantidad;
 
-	        	$(".celda").width(tamDeCelda);
-	        	$(".celda").height(tamDeCelda);
+	        	$(".celda").width(tamDeCelda).height(tamDeCelda);
 	        },
 	    
 	    reSize: function() {
@@ -43,8 +33,7 @@ var myPixelDraw = {
 	          		alert('Ingres un valor de 1 a 50');
                     newSize = this.defaultCells;
 
-	          	} else
-	          	{
+	          	} else if (isNaN(newSize)) {
 	          		alter('Ingrese un numero valido');
 	          		newSize = this.defaultCells;
 	          	}
@@ -67,15 +56,40 @@ var myPixelDraw = {
 			},
 
 		pickColor: function() {
-			
+			$('#colorPick > div').on('click', function() {
+                myPixelDraw.colorPicked = $(this).attr('class');
+                $(this).parent().find('.select').removeClass("select");
+                $(this).addClass("select");
+            	});
 			},
 
 		colorIt: function() {
-				console.log('colorIt');
+				$(document).on('mousedown', '#container .celda', function(e) {
+	                e.preventDefault();
+	                myPixelDraw.coloring = true;
+	                if (e.button == 2) {
+	                    $(this).css('background-color', myPixelDraw.cellColor);
+	                    return false;
+	                } else {
+	                    $(this).css('background-color', myPixelDraw.colorPicked);
+	                }
+           		 });
 			},
 		
 		colorOnDrag: function() {
-				console.log('colorOnDrag');
+				$(document).on('mousemove', function(e) {
+	                if (myPixelDraw.coloring == true) {
+	                    var x = e.clientX;
+	                    var y = e.clientY;
+	                    var colorDraggedTo = document.elementFromPoint(x, y);
+	                    if ($(colorDraggedTo).hasClass('celda') && e.button != 2) {
+	                        $(colorDraggedTo).css('background-color', myPixelDraw.colorPicked);
+	                    } else if ($(colorDraggedTo).hasClass('celda') && e.button == 2) {
+	                        $(colorDraggedTo).css('background-color', myPixelDraw.cellColor);
+	                    }
+                	}	
+            	});
+
 			},
 		
 		reset: function() {
@@ -94,10 +108,18 @@ var myPixelDraw = {
 				console.log('grabImage');
 			}
 
-	}
+	}, 
+
+	init: function(container) {
+        myPixelDraw.container = container;
+        var fns = myPixelDraw.fns;
+        for (var i = 0; i < Object.keys(fns).length; i++) {
+            fns[Object.keys(fns)[i]]();
+        }
+    }
 }
 
 $(document).ready(function () {
-  myPixelDraw.init( $("#container") );
-
+  var container = $('#container');
+    myPixelDraw.init(container);
 });
