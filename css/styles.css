@@ -84,7 +84,7 @@ div.buttonActions
 .secpart
 {
 	width: 198px;
-	height: 48px;
+	height: 54px;
 	float: right;
 	border: 1px solid #CFCFC4;
 	border-radius: 30px;
@@ -94,23 +94,49 @@ div.buttonActions
 	/*Grillas*/
 
 
-#grid
+.grid
 {	
-	width: 198px;
-	height: 48px;
-	font-family: 'Roboto', sans-serif;
-	color: #3B3C36;
-	font-size: 10px;
-	float:right;
-	border: 1px solid #CFCFC4;
-	border-radius: 30px;
-	margin-top: 3px;
-
+	border: 1px solid #2c3e50;
+    border-radius: 20px;
+    overflow: auto;
+    padding: 0 14px;
+    margin-bottom: 10px;
+    background-color: white;
 }
 
+.grid p {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+	color: #3B3C36;
+    float: left;
+}
 
+.grid input {
+    float: left;
+    width: 110px;
+    height: 20px;
+    border: 0;
+    border-bottom: 1px solid #2c3e50;
+    margin-left: 5px;
+    margin-top: 4px;
+}
 
-input
+.grid .btn {
+    border: 0;
+    width: 16px;
+    height: 16px;
+    font-size: 24px;
+    float: right;
+    border: none;
+}
+
+.grilla .btn:hover {
+    background: #ffffff;
+    color: #3498db;
+}
+
+/*input
 {
 	width: 80px;
 	border-bottom: 1px solid #3B3C36;
@@ -118,26 +144,16 @@ input
 	border-left: none;
 	border-right: none;
 	background-color: #f2f2f2;
-}
-
+}*/
+/*
 input:focus {
     outline: none !important;
     border-bottom:1px solid #CFCFC4;
     box-shadow: none;
-}
+}*/
 
-p.auxFloat
-{
-	font-family: 'Roboto', sans-serif;
-	color: #3B3C36;
-	display: inline-block;
-	margin: 7% 8%;
-	font-size: 15px;
-	margin-right: 5%;
-	text-transform: uppercase;
-}
 
-button
+/*button
 {
 	width: 30px;
 	height: 30px;
@@ -152,19 +168,35 @@ button:focus {
     border-left: 1px solid #979AAA;
     border-right: 1px solid #979AAA;
     box-shadow: none;
+}*/
+
+
+
+.btn {
+    font-size: 30px;
+    color: #2c3e50;
+    border: 0.5px solid #CFCFC4;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    float: left;
+    margin: 0 6px;
+    cursor: pointer;
+    margin-top: 3px;
+    margin-left: 3px;
 }
 
-
-
-div.btn
-{
-	margin: 5% 8%;
-	float: left;
+.btn:hover {
+    background: #979AAA;
+    color: #ffffff;
+    border-color: #3498db;
 }
 
 #arrowTog
 {
 	border: none;
+	background-color: none;
+	margin-top: 8px;
 }
 
 .ion-ios-arrow-right
@@ -187,77 +219,18 @@ div.btn
 }
 
 #colorPick>div {
+    width: 42px;
+	height: 42px;
+	display: inline;
+	margin: 2% 2%;
     float: left;
-    width: 24px;
-    height: 24px;
+    border: 1px solid #CFCFC4;
+    border-radius: 100%;
     cursor: pointer;
-    border-radius: 24px;
-    margin: 2px;
-    border: 1px solid #f1f1f1;
 }
 
 #colorPick>div.select {
     border: 1px solid #000000;
-}
-
-.cRed
-{
-	width: 42px;
-	height: 42px;
-	display: inline;
-	margin: 2% 2%;
-    float: left;
-    border: 1px solid #CFCFC4;
-    border-radius: 100%;
-    background-color: #FF6961;
-}
-
-.cBlue
-{
-	width: 42px;
-	height: 42px;
-	display: inline;
-	margin: 2% 2%;
-    float: left;
-    border: 1px solid #CFCFC4;
-    border-radius: 100%;
-    background-color: #779ECB;
-}
-
-.cGreen
-{
-	width: 42px;
-	height: 42px;
-	display: inline;
-	margin: 2% 2%;
-    float: left;
-    border: 1px solid #CFCFC4;
-    border-radius: 100%;
-    background-color: #77DD77;
-}
-
-.cBlack
-{
-	width: 42px;
-	height: 42px;
-	display: inline;
-	margin: 2% 2%;
-    float: left;
-    border: 1px solid #CFCFC4;
-    border-radius: 100%;
-    background-color: #3B3C36;
-}
-
-.cWithe
-{
-	width: 42px;
-	height: 42px;
-	display: inline;
-	margin: 2% 2%;
-    float: left;
-    border: 1px solid #CFCFC4;
-    border-radius: 100%;
-    background-color: #F2F3F4;
 }
 
 .celda

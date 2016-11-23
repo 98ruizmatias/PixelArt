@@ -26,7 +26,7 @@ var myPixelDraw = {
 	        },
 	    
 	    reSize: function() {
-	          $('#sizeit').on('click', function() {
+	          $('#arrowTog').on('click', function() {
 	          	var newSize = $('#reSize').val();
 	          	if (newSize == 0 || newSize > 50) 
 	          	{
