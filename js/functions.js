@@ -111,7 +111,24 @@ var myPixelDraw = {
 			},
 		
 		grabImage: function() {
+			$('#grabIt').on('click', function(e) {
+                var container = document.getElementById('container');
+                html2canvas(container, {
+                    onrendered: function(canvas) {
+                        document.body.appendChild(canvas);
+                        $('#killDraw').show();
+                    }
+                	});
+           		});
         	},
+
+        destroy: function() {
+        	$('#killDraw').on('click', function(e) {
+                $('canvas').hide();
+                $('#killDraw').hide();
+                });
+        	}
+        
 	},
 
 	init: function(container) {
