@@ -182,8 +182,8 @@ button:focus {
     float: left;
     margin: 0 6px;
     cursor: pointer;
-    margin-top: 3px;
-    margin-left: 3px;
+    margin-top: 4px;
+    margin-left: 11px;
 }
 
 .btn:hover {
@@ -233,9 +233,21 @@ button:focus {
     border: 1px solid #000000;
 }
 
+
 .celda
 {
 	outline: 0.5px solid grey;
 	float: left;
 	cursor: pointer;
+}
+
+#container .celda {
+    float: left;
+    background: #ecf0f1;
+    outline: 1px solid #fff;
+    cursor: pointer;
+}
+
+#container .celda.no-border {
+    outline: none;
 }

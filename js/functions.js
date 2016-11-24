@@ -93,22 +93,26 @@ var myPixelDraw = {
 			},
 		
 		reset: function() {
-				console.log('reset');
+				$('#reset').on('click', function() {
+                $('.celda').css('background-color', myPixelDraw.cellColor);
+            	});
 			},
 		
 		toggleBorders: function() {
-				console.log('toggleBorders');
+				$('#toggleBorder').on('click', function() {
+                $('.celda').toggleClass('no-border');
+            	});
 			},
 		
 		disableRightClick: function() {
-				console.log('disableRightClick');
+				myPixelDraw.container.on('contextmenu', function() {
+                return false;
+            	})
 			},
 		
 		grabImage: function() {
-				console.log('grabImage');
-			}
-
-	}, 
+        	},
+	},
 
 	init: function(container) {
         myPixelDraw.container = container;
@@ -117,7 +121,7 @@ var myPixelDraw = {
             fns[Object.keys(fns)[i]]();
         }
     }
-}
+};
 
 $(document).ready(function () {
   var container = $('#container');
